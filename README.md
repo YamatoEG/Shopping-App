@@ -1,15 +1,12 @@
-# Statless widget task
+# Shopping App
+This is a simple Flutter shopping app showcasing a list of products and hot offers.  
 
-This Flutter project consists of two main Dart files: `home.dart` and `main.dart`. The application showcases a simple user interface displaying two images (one from local assets and another from a network source) alongside a text 
 
-# features
+## Features  
 
-- A centered column layout with two images.
+- **App Bar**: Displays the title "Shopping App".  
+- **Product Carousel**: A page view to showcase product images.  
+- **Product Grid**: A grid view displaying products with an option to add items to the cart.  
+- **Hot Offers**: A horizontally scrollable list of featured product images
 
-- A descriptive text below the images.
-
-- Custom styling for text and app bar.
-
-# Assets
-
-Ensure that you have added an image named 'img.webp' in an 'assets' folder within your project directory for it to be displayed correctly.
+.
