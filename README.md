@@ -13,7 +13,7 @@ Subsequent branches: Additional features (e.g., signup page and others).
 - **Signup Page**: A user registration form to create a new account.
 
 
-## sign up page Signup Page
+## Signup Page
 The Signup Page allows users to register with the following features:
 
 * Full Name:
