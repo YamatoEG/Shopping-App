@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -14,9 +15,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Center(
           child: Text(
-            "Shopping App",
+            "shopping_app",
             style: TextStyle(color: Colors.black, fontSize: 20),
-          ),
+          ).tr(),
         ),
         backgroundColor: const Color.fromRGBO(3, 125, 246, 1),
         toolbarHeight: 25,
@@ -32,9 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Center(
               child: Text(
-                "Our Products",
+                "our_products",
                 style: TextStyle(fontSize: 15),
-              ),
+              ).tr(),
             ),
             Container(
               //color: Colors.blueGrey,
@@ -67,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 100,
                           height: 60,
                         ),
-                        Text("Product ${index + 1}"),
+                        Text("${"product".tr()} " "${index + 1}"),
                         IconButton(
                           icon: Icon(Icons.add_shopping_cart),
                           onPressed: () {
@@ -90,10 +91,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Hot Offers",
+                      "hot_offers",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                    ),
+                    ).tr(),
                   ),
                   Container(
                     height: 150, // Set a fixed height for the ListView

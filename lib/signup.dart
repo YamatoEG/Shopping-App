@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:my_project/home.dart';
@@ -22,10 +23,10 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Sign up",
+          "sign_up",
           style: TextStyle(color: Colors.black, fontSize: 25),
           textAlign: TextAlign.center,
-        ),
+        ).tr(),
         foregroundColor: Colors.blue,
         backgroundColor: Colors.yellow,
         surfaceTintColor: Colors.blueGrey,
@@ -37,6 +38,21 @@ class _SignupState extends State<Signup> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        changeLocale();
+                      });
+                    },
+                    child: context.locale == Locale('en', 'US')
+                        ? Text("العربية",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold))
+                        : Text(
+                            "English",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          )),
                 SizedBox(
                   height: 5,
                 ),
@@ -52,12 +68,12 @@ class _SignupState extends State<Signup> {
                     controller: fnameCont,
                     validator: (value) {
                       if (value != null && value[0] != value[0].toUpperCase()) {
-                        return "Make sure First char is Capitalized";
+                        return "fnamever".tr();
                       } else {
                         return null;
                       }
                     },
-                    decoration: InputDecoration(labelText: "FullName"),
+                    decoration: InputDecoration(labelText: "full_name".tr()),
                     textAlign: TextAlign.start,
                   ),
                 ),
@@ -67,13 +83,13 @@ class _SignupState extends State<Signup> {
                   child: TextFormField(
                     controller: emailCont,
                     validator: (value) {
-                      if (value != null && value.contains('@') == false) {
-                        return "Please enter a valid email";
+                      if (value != null && !value.contains('@')) {
+                        return 'emailver'.tr();
                       } else {
                         return null;
                       }
                     },
-                    decoration: InputDecoration(labelText: "Email"),
+                    decoration: InputDecoration(labelText: "email".tr()),
                     textAlign: TextAlign.start,
                   ),
                 ),
@@ -84,13 +100,13 @@ class _SignupState extends State<Signup> {
                     controller: passwordCont,
                     validator: (value) {
                       if (value != null && value.length < 6) {
-                        return "Please enter a strong password";
+                        return "psverf".tr();
                       } else {
                         return null;
                       }
                     },
                     obscureText: true,
-                    decoration: InputDecoration(labelText: "Password"),
+                    decoration: InputDecoration(labelText: "password".tr()),
                     textAlign: TextAlign.start,
                   ),
                 ),
@@ -101,13 +117,13 @@ class _SignupState extends State<Signup> {
                     //controller: passwordCont,
                     validator: (value) {
                       if (value != null && value != passwordCont.text) {
-                        return "password not match";
+                        return "copassver".tr();
                       } else {
                         return null;
                       }
                     },
                     obscureText: true,
-                    decoration: InputDecoration(labelText: "Confirm Password"),
+                    decoration: InputDecoration(labelText: "co_password".tr()),
                     textAlign: TextAlign.start,
                   ),
                 ),
@@ -117,7 +133,7 @@ class _SignupState extends State<Signup> {
                         myDialog();
                       }
                     },
-                    child: Text("Sign Up"))
+                    child: Text("sign_up".tr()))
               ],
             )),
       ),
@@ -129,11 +145,11 @@ class _SignupState extends State<Signup> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Welcome ${fnameCont.text}'),
-          content: Text("account created successfully"),
+          title: Text('${'welcome'.tr()}${fnameCont.text}'),
+          content: Text("acc_scc_crt").tr(),
           actions: <Widget>[
             TextButton(
-              child: const Text('Continue'),
+              child: const Text('continue').tr(),
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.push(
@@ -152,5 +168,13 @@ class _SignupState extends State<Signup> {
     );
   }
 
-  formValdite() {}
+  changeLocale() {
+    setState(() {
+      if (context.locale == Locale('en', 'US')) {
+        context.setLocale(Locale('ar', 'EG'));
+      } else {
+        context.setLocale(Locale('en', 'US'));
+      }
+    });
+  }
 }

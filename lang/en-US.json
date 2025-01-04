@@ -1,0 +1,19 @@
+{
+    "full_name": "Full Name",
+    "email": "Email",
+    "password":"Password",
+    "co_password" :"Confirm Password",
+    "sign_up": "Sign Up",
+    "hot_offers":"Hot Offers",
+    "acc_scc_crt": "Account Created Successfully",
+    "welcome":"Welcome",
+    "continue":"Continue",
+    "our_products": "Our Products",
+    "product":"Product",
+    "shopping_app":"Shopping App",
+    "psverf":"Please enter a strong password",
+    "copassver":"password not match",
+    "fnamever":"Make sure First char is Capitalized",
+    "emailver": "Please enter a valid email with @"
+
+}
