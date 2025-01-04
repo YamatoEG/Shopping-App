@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:my_project/home.dart';
 
 class Signup extends StatefulWidget {
@@ -16,7 +16,7 @@ class _SignupState extends State<Signup> {
   TextEditingController passwordCont = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
-
+  bool isFadingOut = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +138,11 @@ class _SignupState extends State<Signup> {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
+                  MaterialPageRoute(
+                      builder: (context) => const MyHomePage()
+                          .animate()
+                          .fadeIn(duration: Duration(seconds: 3))
+                          .shimmer()),
                 );
               },
             ),

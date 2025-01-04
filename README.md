@@ -29,6 +29,17 @@ The Signup Page allows users to register with the following features:
 * Navigation:
     - Redirects the user to the home page after successful signup.
 
+## Animation with <flutter_animate>
+
+* The app incorporates smooth transition animations using the flutter_animate package for better user experience:
+
+1. Fade-In and Shimmer on Navigation to Home Page:
+
+- After the user successfully signs up, a dialog confirms their registration.
+
+- Upon clicking "Continue," the signup page fades out, and the home page fades in with a shimmer effect.
+
+
 ## assets 
 --- 
 Make sure to include the necessary image assets in the assets directory:
