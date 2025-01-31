@@ -80,8 +80,7 @@ The app incorporates smooth transition animations using the flutter_animate pack
 Make sure to include the necessary image assets in the assets directory:  
 ---
 
- ## Screenshots
-| :---: | :---: | :---: |
-| Login | Signup |
-
-| ![Login](firebase%20screenshots/login.jpg) | ![signup](firebase%20screenshots/signup.jpg) | ![firebase_users](firebase%20screenshots/firebase_users.jpg) |
+## Screenshots  
+|           Login           |          Signup          |        Firebase Users       |  
+| :-----------------------: | :---------------------: | :-------------------------: |  
+| ![Login](firebase%20screenshots/login.jpg) | ![Signup](firebase%20screenshots/signup.jpg) | ![Firebase Users](firebase%20screenshots/firebase%20users%20created.jpg) |
