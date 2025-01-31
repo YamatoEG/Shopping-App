@@ -1,24 +1,26 @@
-# Shopping App
-This is a simple Flutter shopping app showcasing a list of products and hot offers.  
-New versions' first task added in the `first-version` branch. Subsequent branches: Additional features (e.g., signup page and others).
+# Shopping App  
+This is a simple Flutter shopping app showcasing products and hot offers.  
 
 ## Features  
+- **App Bar**: Displays "Shopping App".  
+- **Product Carousel**: Showcases product images.  
+- **Product Grid**: Grid view for product display and cart addition.  
+- **Hot Offers**: Scrollable list of featured products.  
+- **Signup & Login Pages**: User registration and authentication with Firebase.  
+- **Localization**: Supports Arabic and English using `easy_localization`.  
 
-- **App Bar**: Displays the title "Shopping App".  
-- **Product Carousel**: A page view to showcase product images.  
-- **Product Grid**: A grid view displaying products with an option to add items to the cart.  
-- **Hot Offers**: A horizontally scrollable list of featured product images.
-- **Signup Page**: A user registration form to create a new account.
-- **Localization**: Support for Arabic and English languages using the `easy_localization` package.
+## Firebase Authentication  
 
-## Localization (New Feature)
-The app now supports multiple languages (Arabic and English) to provide a localized experience for users.
+### Setup  
+1. **Firebase Integration**:  
+   - Configure Firebase for your Flutter app.  
+   - Add `google-services.json` (Android) and `GoogleService-Info.plist` (iOS).  
 
-### Implementation
-- Added the `easy_localization` package to the project.
-- Created translation files in JSON format for Arabic (`ar.json`) and English (`en.json`).
-- Updated the `MaterialApp` widget to use `EasyLocalization` for dynamic language switching.
-- Users can switch between Arabic and English through a language selector.
+2. **Dependencies**:  
+   ```yaml  
+   dependencies:  
+     firebase_core: ^latest_version  
+     firebase_auth: ^latest_version
 
 ### How to Add Translations
 1. Add your localized strings in `assets/translations/en.json` and `assets/translations/ar.json`.
@@ -41,6 +43,8 @@ The app now supports multiple languages (Arabic and English) to provide a locali
    ```
 
 ## Signup Page
+- Signup: Users register with email/password.
+
 The Signup Page allows users to register with the following features:
 
 * Full Name:
@@ -56,6 +60,11 @@ The Signup Page allows users to register with the following features:
 * Navigation:
     - Redirects the user to the home page after successful signup.
 
+    
+
+## Login Page
+Login: Users log in with email/password.
+
 ## Animation with <flutter_animate>
 
 The app incorporates smooth transition animations using the flutter_animate package for better user experience:
@@ -70,11 +79,9 @@ The app incorporates smooth transition animations using the flutter_animate pack
 ---  
 Make sure to include the necessary image assets in the assets directory:  
 ---
-- prod1.png
-- prod2.png
-- prod3.webp
-- pro1.png
-- pro2.png
-- pro3.png
-- signup.png
 
+ ## Screenshots
+| :---: | :---: | :---: |
+| Login | Signup |
+
+| ![Login](firebase%20screenshots/login.jpg) | ![signup](firebase%20screenshots/signup.jpg) | ![firebase_users](firebase%20screenshots/firebase_users.jpg) |
